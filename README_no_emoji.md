@@ -1,5 +1,5 @@
-# Dr. Salaheldin Elamin Abdalla Terair, MBBS, MSc, MHPE, PGP
-*Specialization: Generative AI for Natural Language Processing Program*
+ Dr. Salaheldin Elamin Abdalla Terair, MBBS, MSc, MHPE, PGP
+Generative AI for Natural Language Processing Program*
 
 Medical Educator | Data Scientist | AI in Healthcare Innovator
 Portfolio: https://salahterair.github.io/Portfolio-/
@@ -9,11 +9,9 @@ Email: salahsud@gmail.com
 ---
 
 ## Medical Education (Human Anatomy)
-Educational resources focusing on the foundational sciences of human anatomy and histology.
+Educational resources focusing on the foundational sciences of human anatomy.
 - Histology Quiz (Interactive Module): https://salahterair.github.io/Histology-Quiz/
 - Mock Exam – Human Anatomy Review: https://salahterair.github.io/Mock-exam/
-- Human Anatomy Lectures – Structured PowerPoint presentations for medical students.
-- Histology & Embryology Modules – Slide-based lessons with clear learning objectives.
 - Interactive Quizzes – Case-based and image-based questions aligned with curriculum outcomes.
 
 ---
