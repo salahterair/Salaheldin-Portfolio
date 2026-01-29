@@ -1,264 +1,149 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dr. Salaheldin Terair — Portfolio</title>
-  <meta name="description" content="Professional portfolio of Dr. Salaheldin Elamin Abdalla Terair — Medical Education, Data Science, and AI in Healthcare.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0d12;
-      --card:#111421;
-      --muted:#99a2b2;
-      --text:#e9edf5;
-      --accent:#4fa3ff;
-      --accent-2:#6df0c2;
-      --ring: rgba(79,163,255,.35);
-    }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#f7fafc;
-        --card:#ffffff;
-        --muted:#475569;
-        --text:#0b1220;
-        --accent:#2563eb;
-        --accent-2:#059669;
-        --ring: rgba(37,99,235,.25);
-      }
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-      background: radial-gradient(1200px 800px at 20% -10%, rgba(79,163,255,.1), transparent 60%),
-                  radial-gradient(1000px 600px at 120% 10%, rgba(109,240,194,.12), transparent 60%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
-    .container{
-      max-width:1080px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-    header{
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-      padding: 48px 0 12px;
-    }
-    .title{
-      font-size: clamp(28px, 4vw, 42px);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-    .subtitle{
-      font-size: clamp(14px, 2vw, 18px);
-      color:var(--muted);
-    }
-    .badge{
-      display:inline-block;
-      padding:8px 12px;
-      border:1px solid var(--ring);
-      border-radius:999px;
-      color:var(--accent);
-      background:linear-gradient(90deg, rgba(79,163,255,.08), rgba(109,240,194,.08));
-      font-weight:600;
-      font-size:14px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:16px;
-    }
-    .card{
-      grid-column: span 12;
-      background:linear-gradient(180deg, rgba(255,255,255,.02), transparent), var(--card);
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:20px;
-      padding:20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.18);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .card:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 16px 40px rgba(0,0,0,.25);
-    }
-    @media (min-width: 820px){
-      .span-6{grid-column: span 6;}
-      .span-4{grid-column: span 4;}
-    }
-    h2{
-      margin: 0 0 8px;
-      font-size:22px;
-    }
-    p{margin: 8px 0 0; color:var(--muted)}
-    .actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
-    .btn{
-      appearance:none;
-      border:none;
-      background: linear-gradient(180deg, var(--accent), #2b88f5);
-      color:white;
-      padding:10px 14px;
-      border-radius:12px;
-      font-weight:700;
-      cursor:pointer;
-      text-decoration:none;
-      box-shadow: 0 6px 16px rgba(37,99,235,.35);
-      transition: transform .15s ease, box-shadow .2s ease;
-    }
-    .btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 20px rgba(37,99,235,.45) }
-    .btn.alt{
-      background: linear-gradient(180deg, var(--accent-2), #11b981);
-      box-shadow: 0 6px 16px rgba(16,185,129,.35);
-    }
-    .list{
-      margin: 8px 0 0;
-      padding-left: 18px;
-    }
-    footer{
-      margin: 36px 0 12px;
-      color:var(--muted);
-      font-size:14px;
-      text-align:center;
-    }
-    .tiny{font-size:13px}
-    .link{
-      color:var(--accent);
-      text-decoration:none;
-      font-weight:600;
-    }
-    .link:hover{ text-decoration:underline }
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.08);
-      background:linear-gradient(90deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
-    }
-    .pill-dot{
-      width:10px; height:10px; border-radius:999px; background:var(--accent);
-      box-shadow: 0 0 0 3px var(--ring);
-    }
-  
-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: saturate(120%) blur(8px);
-  background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,0)) , transparent;
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-.head-inner{
-  display:flex; flex-direction:column; gap:16px;
-  padding: 28px 0 12px;
-  transition: padding .2s ease, transform .2s ease;
-}
-header.shrink .head-inner{
-  padding: 12px 0 8px;
-  transform: translateY(-2px);
-}
-header .title{ transition: font-size .2s ease, letter-spacing .2s ease }
-header.shrink .title{ font-size: clamp(22px, 3.2vw, 32px); letter-spacing: -0.01em }
-
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="head-inner">
-      <span class="pill"><span class="pill-dot"></span> Portfolio</span>
-      <div class="title">Dr. Salaheldin Elamin Abdalla Terair</div>
-      <div class="subtitle"><strong>MBBS, MSc, MHPE, PGP</strong> — Medical Educator · Data Scientist · AI in Healthcare Innovator</div>
-      <div><span class="badge">🎓 Specialization: Generative AI for Natural Language Processing Program</span></div>
-      <div class="actions">
-        <a class="btn" href="README.md">View Full README</a>
-        <a class="btn alt" href="ABOUT.md">About</a>
-        <a class="btn" href="https://www.linkedin.com/in/salaheldin-terair" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn alt" href="mailto:salahsud@gmail.com">Email</a>
-      </div>
-          </div>
+
+<body id="top">
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="profile_name">Dr. Salaheldin Terair</div>
+    </div>
+    <div class="nav-right">
+      <a class="topmenu" href="#about">About Me</a>
+      <a class="topmenu" href="#projects">Project Details</a>
+      <a class="topmenu" href="#skills">Skills</a>
+      <a class="topmenu" href="#recommendations">Recommendations</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- HERO -->
+    <header class="hero">
+      <h1>Dr. Salaheldin Elamin Abdalla Terair</h1>
+      <p class="subtitle">MBBS, MSc, MHPE, PGP — Medical Educator · Data Scientist · AI in Healthcare</p>
     </header>
 
-    <section class="grid" aria-label="Featured Projects" style="margin-top:12px">
-      <article class="card span-6">
-        <h2>🧬 Histology Quiz (Interactive Module)</h2>
-        <p>Self-paced, image-based histology questions aligned with medical student learning outcomes.</p>
-        <div class="actions">
-          <a class="btn" href="https://salahterair.github.io/Histology-Quiz/" target="_blank" rel="noopener">Open Module</a>
-        </div>
-      </article>
+    <!-- ABOUT ( includes UNIQUE profile image tag) -->
+    <section id="about" class="section">
+      <div class="card">
+        <h2>About Me</h2>
 
-      <article class="card span-6">
-        <h2>🧠 Mock Exam — Human Anatomy Review</h2>
-        <p>Timed practice exam to test foundational anatomy knowledge with immediate feedback.</p>
-        <div class="actions">
-          <a class="btn" href="https://salahterair.github.io/Mock-exam/" target="_blank" rel="noopener">Start Exam</a>
-        </div>
-      </article>
+        <!-- Required: unique profile image tag -->
+        <img id="profile_image" src="https://via.placeholder.com/140" alt="Profile image of Dr. Salaheldin Terair"
+             style="width:140px;height:140px;border-radius:16px;border:1px solid rgba(255,255,255,.15);display:block;margin:10px 0 14px;object-fit:cover;">
 
-      <article class="card span-4">
-        <h2>🧍‍♂️ Medical Education (Human Anatomy)</h2>
-        <p>Lecture slide decks, case-based learning, and student resources.</p>
-        <ul class="list">
-          <li><a class="link" href="README.md#-medical-education-human-anatomy">Section in README</a></li>
-        </ul>
-      </article>
-
-      <article class="card span-4">
-        <h2>💡 Teaching & Assessment Tools</h2>
-        <p>SCORM packages, HTML quizzes, and Moodle resources for competency-based learning.</p>
-        <ul class="list">
-          <li><a class="link" href="README.md#-interactive-teaching--assessment-tools">Section in README</a></li>
-        </ul>
-      </article>
-
-      <article class="card span-4">
-        <h2>🧠 AI & Generative Models in Healthcare</h2>
-        <p>LLM-based chatbots, clinical NLP, and predictive analytics for health data.</p>
-        <ul class="list">
-          <li><a class="link" href="README.md#-ai--generative-models-in-healthcare">Section in README</a></li>
-        </ul>
-      </article>
-
-      <article class="card span-6">
-        <h2>📊 Data Science & Analytics</h2>
-        <p>Python notebooks, dashboards, and automated reporting for decision support.</p>
-        <ul class="list">
-          <li><a class="link" href="README.md#-data-science--analytics-projects">Section in README</a></li>
-        </ul>
-      </article>
-
-      <article class="card span-6">
-        <h2>🏛️ Quality Assurance & Faculty Development</h2>
-        <p>QA reports, lecturer performance frameworks, and accreditation tools.</p>
-        <ul class="list">
-          <li><a class="link" href="README.md#-quality-assurance--faculty-development">Section in README</a></li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="card" style="margin-top:18px">
-      <h2>📩 Contact</h2>
-      <p>If you’d like to collaborate or have questions about teaching, data science, or AI in healthcare, feel free to reach out.</p>
-      <div class="actions">
-        <a class="btn" href="mailto:salahsud@gmail.com">Email Dr. Terair</a>
-        <a class="btn alt" href="https://www.linkedin.com/in/salaheldin-terair/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <p>
+          I am a medical educator with interests in competency-based education, assessment design, and quality assurance.
+          I also develop AI-enabled and data-driven learning tools to support teaching, feedback, and student success.
+        </p>
       </div>
-      <p class="tiny" style="margin-top:10px">Preferred email: <a class="link" href="mailto:salahsud@gmail.com">salahsud@gmail.com</a></p>
     </section>
 
+    <!-- PROJECTS (3 project cards required) -->
+    <section id="projects" class="section">
+      <div class="card">
+        <h2>Project Details</h2>
+        <div class="projects">
+          <article class="card project-card">
+            <h3>Interactive Histology Quiz</h3>
+            <p class="subtitle">Self-paced, interactive module for medical students.</p>
+          </article>
 
-    <footer>
-      <div>© <span id="y"></span> Dr. Salaheldin Elamin Abdalla Terair</div>
-      <div class="tiny">Built with clean HTML/CSS. Auto-adapts to dark/light mode.</div>
-    </footer>
-  </div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+          <article class="card project-card">
+            <h3>Mock Anatomy Exam</h3>
+            <p class="subtitle">Timed formative assessment with structured review.</p>
+          </article>
 
-  <button id="backToTop" aria-label="Back to Top" style="position:fixed;right:18px;bottom:18px;padding:12px 14px;border:none;border-radius:999px;cursor:pointer;font-weight:800;background:linear-gradient(180deg, var(--accent), #2b88f5);color:#fff;box-shadow:0 8px 20px rgba(37,99,235,.45);opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;z-index:60">⬆</button>
+          <article class="card project-card">
+            <h3>Feedback Skills Workshop Toolkit</h3>
+            <p class="subtitle">Faculty development resources for effective feedback practice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- SKILLS (5 with logos) -->
+    <section id="skills" class="section">
+      <div class="card">
+        <h2>Skills</h2>
+        <p class="subtitle">Five core skills with logos/icons.</p>
+
+        <div class="skills-logos" aria-label="Five skills with logos">
+          <div class="skill-card">
+            <div class="skill-logo" aria-hidden="true">🧑‍🏫</div>
+            <div class="skill-meta">
+              <div class="skill-name">Medical Education</div>
+              <div class="skill-note">Curriculum, facilitation, assessment</div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo" aria-hidden="true">📊</div>
+            <div class="skill-meta">
+              <div class="skill-name">Data Science</div>
+              <div class="skill-note">Analysis, dashboards, reporting</div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo" aria-hidden="true">🐍</div>
+            <div class="skill-meta">
+              <div class="skill-name">Python</div>
+              <div class="skill-note">Automation, notebooks, utilities</div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo" aria-hidden="true">🤖</div>
+            <div class="skill-meta">
+              <div class="skill-name">AI & NLP</div>
+              <div class="skill-note">LLMs, prompts, evaluation</div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo" aria-hidden="true">🎓</div>
+            <div class="skill-meta">
+              <div class="skill-name">Moodle & SCORM</div>
+              <div class="skill-note">eLearning packages, deployment</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOMMENDATIONS (3 full recommendations required) -->
+    <section id="recommendations" class="section">
+      <div class="card">
+        <h2>Recommendations</h2>
+        <p class="subtitle">What colleagues and learners say.</p>
+
+        <div id="recommendationList">
+          <div class="quote">“Dr. Terair demonstrates exceptional expertise in medical education and digital assessment design.”</div>
+          <div class="quote">“A forward-thinking educator integrating AI responsibly into health professions education.”</div>
+          <div class="quote">“Highly organized, supportive mentor who creates psychologically safe learning environments.”</div>
+        </div>
+
+        <hr class="divider" />
+
+        <form id="recommendationForm">
+          <label for="recText" class="form-label">Add a new recommendation</label>
+          <textarea id="recText" rows="3" placeholder="Type a recommendation..." required></textarea>
+          <button type="submit" class="btn">Submit Recommendation</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- WORKING HOME ICON -->
+  <button id="homeBtn" aria-label="Home" title="Home">⌂</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
